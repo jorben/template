@@ -33,8 +33,13 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="bg-dark-900 text-white">
-      <div className="container-custom">
+    <footer className="bg-dark-900 text-white relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0">
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary-500/20 rounded-full blur-3xl"></div>
+      </div>
+      
+      <div className="container-custom relative z-10">
         <div className="py-16 border-b border-gray-800">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             {/* Company Info */}

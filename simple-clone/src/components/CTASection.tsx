@@ -8,7 +8,6 @@ export default function CTASection() {
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]"></div>
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary-500/20 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary-500/20 rounded-full blur-3xl"></div>
       </div>
 
       <div className="container-custom relative z-10">

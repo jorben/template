@@ -3,9 +3,9 @@ import { brands } from '../data/mockData'
 
 export default function BrandShowcase() {
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-gray-50 relative">
       <div className="container-custom">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <motion.h2
             className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
             initial={{ opacity: 0, y: 20 }}
@@ -67,7 +67,7 @@ export default function BrandShowcase() {
           </svg>
 
           {/* Brand Logos */}
-          <div className="flex justify-center items-center space-x-16 md:space-x-24 lg:space-x-32">
+          <div className="flex justify-center items-center space-x-12 md:space-x-20 lg:space-x-28">
             {brands.map((brand, index) => (
               <motion.div
                 key={brand.name}
@@ -90,13 +90,13 @@ export default function BrandShowcase() {
 
         {/* Testimonial */}
         <motion.div
-          className="max-w-2xl mx-auto mt-16 text-center"
+          className="max-w-2xl mx-auto mt-12 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <div className="bg-gray-50 rounded-2xl p-8">
+          <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
             <div className="flex items-center justify-center mb-4">
               <div className="w-12 h-12 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full flex items-center justify-center text-white font-semibold text-lg">
                 S

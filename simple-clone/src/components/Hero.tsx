@@ -4,7 +4,7 @@ import { cn } from '../utils/cn'
 
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-b from-gray-50 to-white pt-32 pb-20">
+    <section className="relative bg-gradient-to-b from-gray-50 to-white min-h-screen flex items-center justify-center">
       <div className="container-custom">
         <div className="max-w-4xl mx-auto text-center">
           {/* User Avatars */}
@@ -35,7 +35,7 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
           >
             Build your next
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-primary-600">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-primary-600 leading-[1.3]">
               big idea
             </span>
           </motion.h1>
@@ -89,9 +89,10 @@ export default function Hero() {
 
       {/* Background Decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary-100 rounded-full opacity-50 blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary-100 rounded-full opacity-50 blur-3xl"></div>
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-primary-100 rounded-full opacity-60 blur-3xl"></div>
+        <div className="absolute bottom-16 -left-48 w-96 h-96 bg-primary-100 rounded-full opacity-60 blur-3xl"></div>
       </div>
+      
     </section>
   )
 }

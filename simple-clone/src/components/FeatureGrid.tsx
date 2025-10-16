@@ -3,7 +3,7 @@ import { features } from '../data/mockData'
 
 export default function FeatureGrid() {
   return (
-    <section className="section-padding bg-dark-900 text-white">
+    <section className="section-padding bg-dark-900 text-white relative">
       <div className="container-custom">
         <div className="text-center mb-16">
           <motion.h2
@@ -46,8 +46,8 @@ export default function FeatureGrid() {
 
         {/* Background Pattern */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary-500/10 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute -top-20 -right-40 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-20 -left-40 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl"></div>
         </div>
       </div>
     </section>

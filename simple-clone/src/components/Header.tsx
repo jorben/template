@@ -13,34 +13,24 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="text-2xl font-bold text-primary-600">Simple</div>
+            <a href="/" className="text-2xl font-bold text-primary-600 hover:text-primary-700 transition-colors">
+              Simple
+            </a>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <div key={item.label} className="relative">
+              <div
+                key={item.label}
+                className="relative group"
+                onMouseEnter={() => item.children && setActiveDropdown(item.label)}
+                onMouseLeave={() => setActiveDropdown(null)}
+              >
                 {item.children ? (
-                  <div
-                    className="flex items-center space-x-1 text-gray-600 hover:text-gray-900 cursor-pointer transition-colors"
-                    onMouseEnter={() => setActiveDropdown(item.label)}
-                    onMouseLeave={() => setActiveDropdown(null)}
-                  >
+                  <div className="flex items-center space-x-1 text-gray-600 hover:text-gray-900 cursor-pointer transition-colors">
                     <span>{item.label}</span>
                     <ChevronDown className="w-4 h-4" />
-                    {activeDropdown === item.label && (
-                      <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2">
-                        {item.children.map((child) => (
-                          <a
-                            key={child.label}
-                            href={child.href}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors"
-                          >
-                            {child.label}
-                          </a>
-                        ))}
-                      </div>
-                    )}
                   </div>
                 ) : (
                   <a
@@ -49,6 +39,33 @@ export default function Header() {
                   >
                     {item.label}
                   </a>
+                )}
+                
+                {/* Dropdown Menu */}
+                {activeDropdown === item.label && (
+                  <div className="absolute top-full left-0 pt-2">
+                    {/* Invisible gap filler that extends above the dropdown */}
+                    <div
+                      className="absolute top-0 left-0 right-0 h-4 bg-transparent"
+                      onMouseEnter={() => setActiveDropdown(item.label)}
+                    ></div>
+                    {/* Dropdown menu */}
+                    <div
+                      className="w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2"
+                      onMouseEnter={() => setActiveDropdown(item.label)}
+                      onMouseLeave={() => setActiveDropdown(null)}
+                    >
+                    {item.children?.map((child) => (
+                      <a
+                        key={child.label}
+                        href={child.href}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors"
+                      >
+                        {child.label}
+                      </a>
+                    ))}
+                    </div>
+                  </div>
                 )}
               </div>
             ))}
