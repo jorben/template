@@ -27,59 +27,50 @@ export default function BrandShowcase() {
         </div>
 
         {/* Brand Logos with Connection Lines */}
-        <div className="relative">
-          {/* Connection Lines */}
-          <svg
-            className="absolute inset-0 w-full h-32"
-            viewBox="0 0 1200 120"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            {/* Main horizontal line */}
-            <motion.path
-              d="M50 60 H1150"
-              stroke="#E5E7EB"
-              strokeWidth="2"
-              strokeDasharray="8 8"
-              initial={{ pathLength: 0 }}
-              whileInView={{ pathLength: 1 }}
+        <div className="relative py-16">
+          {/* Main horizontal line */}
+          <div className="absolute left-0 right-0 top-8 flex justify-center">
+            <motion.div
+              className="w-11/12 h-0.5 bg-gradient-to-r from-transparent via-gray-300 to-transparent"
+              style={{
+                background: 'repeating-linear-gradient(to right, #E5E7EB 0, #E5E7EB 8px, transparent 8px, transparent 16px)'
+              }}
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
               transition={{ duration: 1.5, delay: 0.5 }}
               viewport={{ once: true }}
             />
-            
-            {/* Connection lines to logos */}
-            {brands.map((_, index) => {
-              const x = 200 + index * 160
-              return (
-                <motion.path
-                  key={index}
-                  d={`M${x} 60 V30`}
-                  stroke="#E5E7EB"
-                  strokeWidth="2"
-                  strokeDasharray="8 8"
-                  initial={{ pathLength: 0 }}
-                  whileInView={{ pathLength: 1 }}
-                  transition={{ duration: 0.8, delay: 0.8 + index * 0.1 }}
-                  viewport={{ once: true }}
-                />
-              )
-            })}
-          </svg>
+          </div>
 
           {/* Brand Logos */}
-          <div className="flex justify-center items-center space-x-12 md:space-x-20 lg:space-x-28">
+          <div className="relative flex justify-center items-end gap-8 md:gap-16 lg:gap-20">
             {brands.map((brand, index) => (
               <motion.div
                 key={brand.name}
-                className="flex flex-col items-center"
+                className="flex flex-col items-center relative"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center text-2xl mb-2 shadow-sm hover:shadow-md transition-shadow duration-300">
+                {/* Vertical connection line */}
+                <motion.div
+                  className="absolute bottom-20 left-1/2 -translate-x-1/2 w-0.5 h-8"
+                  style={{
+                    background: 'repeating-linear-gradient(to bottom, #E5E7EB 0, #E5E7EB 8px, transparent 8px, transparent 16px)'
+                  }}
+                  initial={{ scaleY: 0 }}
+                  whileInView={{ scaleY: 1 }}
+                  transition={{ duration: 0.8, delay: 0.8 + index * 0.1 }}
+                  viewport={{ once: true }}
+                />
+                
+                {/* Brand Logo */}
+                <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-2xl mb-3 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 border border-gray-100 relative z-10">
                   {brand.logo}
                 </div>
+                
+                {/* Brand Name */}
                 <span className="text-sm text-gray-600 font-medium">
                   {brand.name}
                 </span>
