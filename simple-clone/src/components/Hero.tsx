@@ -5,7 +5,7 @@ import { cn } from '../utils/cn'
 export default function Hero() {
   return (
     <section className="relative bg-gradient-to-b from-gray-50 to-white min-h-screen flex items-center justify-center">
-      <div className="container-custom">
+      <div className="container-custom relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* User Avatars */}
           <div className="flex justify-center mb-8">
@@ -88,9 +88,11 @@ export default function Hero() {
       </div>
 
       {/* Background Decoration */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-primary-100 rounded-full opacity-60 blur-3xl"></div>
         <div className="absolute bottom-16 -left-48 w-96 h-96 bg-primary-100 rounded-full opacity-60 blur-3xl"></div>
+        {/* New large gradient circle positioned center */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-100 rounded-full opacity-60 blur-3xl"></div>
       </div>
       
     </section>
