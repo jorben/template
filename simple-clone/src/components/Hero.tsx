@@ -3,6 +3,10 @@ import { ArrowRight, Play } from 'lucide-react'
 import { cn } from '../utils/cn'
 import AssetPriceWidget from './AssetPriceWidget'
 import { assetSections } from '../data/mockData'
+import ellipse1 from '../assets/ellipse-1.png'
+import ellipse2 from '../assets/ellipse-2.png'
+import ellipse3 from '../assets/ellipse-3.png'
+import star from '../assets/star.png'
 
 export default function Hero() {
   return (
@@ -87,6 +91,43 @@ export default function Hero() {
         <div className="absolute bottom-16 -left-20 sm:-left-48 w-80 sm:w-96 h-80 sm:h-96 bg-fuchsia-100 rounded-full opacity-60 blur-3xl"></div>
         {/* New large gradient circle positioned center */}
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] sm:w-[800px] h-[600px] sm:h-[800px] bg-primary-100 rounded-full opacity-60 blur-3xl"></div>
+        
+        {/* Decorative Images */}
+        <motion.img 
+          src={ellipse1}
+          alt=""
+          className="hidden sm:block absolute bottom-12 xl:bottom-16 left-4 xl:left-8 w-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+        />
+        
+        <motion.img 
+          src={ellipse2}
+          alt=""
+          className="hidden sm:block absolute top-4 sm:top-20 right-64 sm:right-96 xl:right-[32rem] w-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+        />
+        
+        <motion.img 
+          src={ellipse3}
+          alt=""
+          className="hidden sm:block absolute bottom-56 right-24 w-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.0 }}
+        />
+        
+        <motion.img 
+          src={star}
+          alt=""
+          className="hidden sm:block absolute top-20 sm:top-28 right-16 lg:right-0 lg:left-[30rem] w-8"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
+        />
       </div>
       
     </section>
