@@ -9,24 +9,30 @@ export default function Hero() {
     <section className="relative bg-gradient-to-b from-gray-50 to-white min-h-screen flex items-center justify-center">
       <div className="container-custom relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* User Avatars */}
-          <div className="flex justify-center mb-8">
-            <div className="flex -space-x-3">
-              {[1, 2, 3, 4, 5, 6].map((i) => (
-                <motion.div
-                  key={i}
-                  className={cn(
-                    "w-12 h-12 rounded-full border-4 border-white bg-gradient-to-r from-primary-500 to-primary-600 flex items-center justify-center text-white font-semibold",
-                    i === 6 && "relative"
-                  )}
-                  initial={{ opacity: 0, scale: 0 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: i * 0.1 }}
-                >
-                  {i === 6 ? "+" : i}
-                </motion.div>
-              ))}
-            </div>
+          {/* New Feature Banner */}
+          <div className="flex justify-center mt-8 mb-8">
+            <motion.div
+              className="group cursor-pointer"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              whileHover={{ scale: 1.02 }}
+            >
+              <div className="flex items-center bg-white/90 backdrop-blur-sm border border-gray-200 rounded-full px-1 py-1 shadow-sm hover:shadow-md transition-all duration-300">
+                {/* New 标签 */}
+                <div className="border border-zinc-200 bg-zinc-100 text-xs px-3 py-1 rounded-full mr-4">
+                  New
+                </div>
+                
+                {/* 主要文本内容 */}
+                <span className="text-gray-700">
+                  全新的组件库已发布 - 现在开始构建
+                </span>
+                
+                {/* 右侧箭头 */}
+                <ArrowRight className="w-4 h-4 text-gray-400 ml-3 mr-1.5 group-hover:text-gray-600 group-hover:translate-x-1 transition-all duration-200" />
+              </div>
+            </motion.div>
           </div>
 
           {/* Main Title */}
