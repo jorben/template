@@ -23,3 +23,31 @@ export interface Brand {
   name: string
   logo: string
 }
+
+export interface FinancialAsset {
+  id: string
+  name: string
+  symbol: string
+  icon: string
+  price: number
+  change24h: number
+  changePercent: number
+  chartData: number[]
+  type: 'crypto' | 'stock' | 'fund' | 'commodity'
+  market?: string
+}
+
+export interface AssetSection {
+  title: string
+  emoji: string
+  data: FinancialAsset[]
+  moreLink?: string
+}
+
+export interface WidgetConfig {
+  sections: AssetSection[]
+  theme?: 'light' | 'dark'
+  updateInterval?: number
+  showChart?: boolean
+  showMarket?: boolean
+}

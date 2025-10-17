@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, Play } from 'lucide-react'
 import { cn } from '../utils/cn'
+import AssetPriceWidget from './AssetPriceWidget'
+import { assetSections } from '../data/mockData'
 
 export default function Hero() {
   return (
@@ -68,22 +70,8 @@ export default function Hero() {
             </button>
           </motion.div>
 
-          {/* Category Tabs */}
-          <motion.div
-            className="flex flex-wrap justify-center gap-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            {['Startups', 'Web Apps', 'eCommerce', 'Enterprise'].map((category) => (
-              <button
-                key={category}
-                className="px-6 py-2 rounded-full border border-gray-300 text-gray-600 hover:border-primary-500 hover:text-primary-600 transition-all duration-200"
-              >
-                {category}
-              </button>
-            ))}
-          </motion.div>
+          {/* Asset Price Widget */}
+          <AssetPriceWidget sections={assetSections} />
         </div>
       </div>
 
