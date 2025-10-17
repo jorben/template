@@ -6,11 +6,11 @@ import { assetSections } from '../data/mockData'
 
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-b from-gray-50 to-white min-h-screen flex items-center justify-center">
+    <section className="relative bg-gradient-to-b from-gray-50 to-white min-h-screen flex items-center justify-center pt-16 overflow-hidden">
       <div className="container-custom relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* New Feature Banner */}
-          <div className="flex justify-center mt-8 mb-8">
+          <div className="flex justify-center mt-4 mb-8">
             <motion.div
               className="group cursor-pointer"
               initial={{ opacity: 0, y: 20 }}
@@ -82,11 +82,11 @@ export default function Hero() {
       </div>
 
       {/* Background Decoration */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-pink-100 rounded-full opacity-60 blur-3xl"></div>
-        <div className="absolute bottom-16 -left-48 w-96 h-96 bg-fuchsia-100 rounded-full opacity-60 blur-3xl"></div>
+      <div className="absolute inset-0 pointer-events-none z-0">
+        <div className="absolute -top-40 -right-20 sm:-right-40 w-80 sm:w-96 h-80 sm:h-96 bg-pink-100 rounded-full opacity-60 blur-3xl"></div>
+        <div className="absolute bottom-16 -left-20 sm:-left-48 w-80 sm:w-96 h-80 sm:h-96 bg-fuchsia-100 rounded-full opacity-60 blur-3xl"></div>
         {/* New large gradient circle positioned center */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-100 rounded-full opacity-60 blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] sm:w-[800px] h-[600px] sm:h-[800px] bg-primary-100 rounded-full opacity-60 blur-3xl"></div>
       </div>
       
     </section>

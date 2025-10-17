@@ -8,7 +8,7 @@ export default function Header() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200 w-full">
       <div className="container-custom">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
