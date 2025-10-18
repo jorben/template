@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Menu, X, ChevronDown } from 'lucide-react'
 import { navItems } from '../data/mockData'
-import { cn } from '../utils/cn'
+import logo from '../assets/AlphaWay01.svg'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -12,9 +12,14 @@ export default function Header() {
       <div className="container-custom">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center space-x-2">
+            <img
+              src={logo}
+              alt="Logo"
+              className="w-8 h-8"
+            />
             <a href="/" className="text-2xl font-bold text-primary-600 hover:text-primary-700 transition-colors">
-              Simple
+              AlphaWay
             </a>
           </div>
 

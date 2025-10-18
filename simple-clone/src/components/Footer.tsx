@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Twitter, Github, Linkedin, Facebook } from 'lucide-react'
+import logo from '../assets/AlphaWay01.svg'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -50,7 +51,14 @@ export default function Footer() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="text-2xl font-bold text-primary-600 mb-4">Simple</div>
+              <div className="flex items-center space-x-2 mb-4">
+                <img
+                  src={logo}
+                  alt="Logo"
+                  className="w-8 h-8"
+                />
+                <div className="text-2xl font-bold text-primary-600">AlphaWay</div>
+              </div>
               <p className="text-gray-400 mb-6 max-w-md">
                 Build beautiful, modern websites and applications with our carefully crafted components and templates.
               </p>

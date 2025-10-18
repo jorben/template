@@ -7,6 +7,7 @@ import ellipse1 from '../assets/ellipse-1.png'
 import ellipse2 from '../assets/ellipse-2.png'
 import ellipse3 from '../assets/ellipse-3.png'
 import star from '../assets/star.png'
+import logo from '../assets/AlphaWay01.svg'
 
 export default function Hero() {
   return (
@@ -87,6 +88,16 @@ export default function Hero() {
 
       {/* Background Decoration */}
       <div className="absolute inset-0 pointer-events-none z-0">
+        {/* logo SVG Background - positioned center left with transparency */}
+        <motion.img
+          src={logo}
+          alt=""
+          className="absolute top-1/5 left-1/5 transform -translate-x-1/2 -translate-y-1/2 w-[800px] sm:w-[1000px] h-[800px] sm:h-[1000px] opacity-20"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 0.2, scale: 1 }}
+          transition={{ duration: 1.2, delay: 0.5 }}
+        />
+        
         <div className="absolute -top-40 -right-20 sm:-right-40 w-80 sm:w-96 h-80 sm:h-96 bg-pink-100 rounded-full opacity-60 blur-3xl"></div>
         <div className="absolute bottom-16 -left-20 sm:-left-48 w-80 sm:w-96 h-80 sm:h-96 bg-fuchsia-100 rounded-full opacity-60 blur-3xl"></div>
         {/* New large gradient circle positioned center */}
