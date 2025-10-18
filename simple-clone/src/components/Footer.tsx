@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Twitter, Github, Linkedin, Facebook } from 'lucide-react'
-import logo from '../assets/AlphaWay01.svg'
+import logo from '../assets/AlphaWay02.svg'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()

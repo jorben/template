@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Menu, X, ChevronDown } from 'lucide-react'
 import { navItems } from '../data/mockData'
-import logo from '../assets/AlphaWay01.svg'
+import logo from '../assets/AlphaWay02.svg'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -18,7 +18,7 @@ export default function Header() {
               alt="Logo"
               className="w-8 h-8"
             />
-            <a href="/" className="text-2xl font-bold text-primary-600 hover:text-primary-700 transition-colors">
+            <a href="/" className="text-2xl font-bold bg-gradient-to-r from-cyan-500 to-indigo-500 bg-clip-text text-transparent">
               AlphaWay
             </a>
           </div>
