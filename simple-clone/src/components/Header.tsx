@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Menu, X, ChevronDown } from 'lucide-react'
 import { navItems } from '../data/mockData'
-import logo from '../assets/AlphaWay02.svg'
+import logo from '../assets/logo.svg'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -13,13 +13,12 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <img
-              src={logo}
-              alt="Logo"
-              className="w-8 h-8"
-            />
-            <a href="/" className="text-2xl font-bold bg-gradient-to-r from-cyan-500 to-indigo-500 bg-clip-text text-transparent">
-              AlphaWay
+            <a href='/'>
+              <img
+                src={logo}
+                alt="Logo"
+                className="h-10"
+              />
             </a>
           </div>
 
@@ -81,7 +80,7 @@ export default function Header() {
             <button className="text-gray-600 hover:text-gray-900 transition-colors">
               Login
             </button>
-            <button className="btn-primary text-sm">
+            <button className="btn-primary text-sm bg-gradient-to-r from-blue-600 to-violet-600">
               Get Started
             </button>
           </div>
@@ -133,7 +132,7 @@ export default function Header() {
                 <button className="w-full text-left text-gray-600 hover:text-gray-900 py-2">
                   Login
                 </button>
-                <button className="w-full btn-primary">
+                <button className="w-full btn-primary bg-gradient-to-r from-blue-600 to-violet-600">
                   Get Started
                 </button>
               </div>

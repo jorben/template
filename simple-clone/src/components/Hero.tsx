@@ -48,7 +48,7 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
           >
             Build your next
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-primary-600 leading-[1.3]">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 to-cyan-500 leading-[1.3]">
               big idea
             </span>
           </motion.h1>
@@ -71,7 +71,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <button className="btn-primary flex items-center space-x-2">
+            <button className="btn-primary bg-gradient-to-r from-blue-600 to-violet-600 flex items-center space-x-2">
               <span>Get Started</span>
               <ArrowRight className="w-4 h-4" />
             </button>
